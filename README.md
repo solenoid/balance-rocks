@@ -13,3 +13,7 @@ python -m SimpleHTTPServer
 After that's running visit the site:
 
 <http://localhost:8000/>
+
+The Pexel API key is available after login over here once you've requested it:
+
+<https://www.pexels.com/api/new/>
