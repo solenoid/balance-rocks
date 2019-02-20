@@ -18,14 +18,38 @@
   </head>
   <body>
     <h1>Balance Rocks</h1>
+    <div id="app">
+      <a v-for="photo in photos" v-bind:href="photo.url" target="photo">
+        <img v-bind:src="photo.src.tiny" />
+        <br />
+      </a>
+    </div>
     <script type="module">
+      import Vue from "https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.esm.browser.js";
       import { CANNED_RESPONSE } from "./canned.js";
-      import { showIt, fetchIt } from "./client.js";
+
+      let app = new Vue({
+        el: "#app",
+        data: {
+          photos: [],
+        },
+      });
+
       const LIVE_API = false;
       if (LIVE_API) {
-        fetchIt();
+        // TODO consider reading and respecting rate limiting response headers
+        fetch("https://api.pexels.com/v1/search?query=balance+rocks&per_page=10", {
+          headers: { Authorization: "TBD how to do this safely or if it even matters" },
+        })
+          .then(r => r.json())
+          .then(r => {
+            app.photos = r.photos;
+          })
+          .catch(e => {
+            console.error(e);
+          });
       } else {
-        showIt(CANNED_RESPONSE);
+        app.photos = CANNED_RESPONSE.photos;
       }
     </script>
   </body>
