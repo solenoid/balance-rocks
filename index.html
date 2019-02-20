@@ -28,7 +28,7 @@
       import Vue from "https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.esm.browser.js";
       import { CANNED_RESPONSE } from "./canned.js";
 
-      let app = new Vue({
+      let vm = new Vue({
         el: "#app",
         data: {
           photos: [],
@@ -43,13 +43,13 @@
         })
           .then(r => r.json())
           .then(r => {
-            app.photos = r.photos;
+            vm.photos = r.photos;
           })
           .catch(e => {
             console.error(e);
           });
       } else {
-        app.photos = CANNED_RESPONSE.photos;
+        vm.photos = CANNED_RESPONSE.photos;
       }
     </script>
   </body>
