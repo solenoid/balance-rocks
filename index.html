@@ -18,7 +18,15 @@
   </head>
   <body>
     <h1>Balance Rocks</h1>
-    <script src="canned.js"></script>
-    <script src="client.js"></script>
+    <script type="module">
+      import { CANNED_RESPONSE } from "./canned.js";
+      import { showIt, fetchIt } from "./client.js";
+      const LIVE_API = false;
+      if (LIVE_API) {
+        fetchIt();
+      } else {
+        showIt(CANNED_RESPONSE);
+      }
+    </script>
   </body>
 </html>

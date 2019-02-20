@@ -1,4 +1,4 @@
-window.CANNED_RESPONSE = {
+export const CANNED_RESPONSE = {
   total_results: 5644,
   page: 1,
   per_page: 10,

@@ -1,4 +1,4 @@
-const showIt = r => {
+export const showIt = r => {
   const container = document.createElement("div");
   // TODO bail on error coming back and don't assume photos array
   container.innerHTML = r.photos
@@ -11,8 +11,7 @@ const showIt = r => {
   document.body.appendChild(container);
 };
 
-const LIVE_API = false;
-if (LIVE_API) {
+export const fetchIt = () => {
   // TODO consider reading and respecting rate limiting response headers
   fetch("https://api.pexels.com/v1/search?query=balance+rocks&per_page=10", {
     headers: { Authorization: "TBD how to do this safely or if it even matters" },
@@ -22,6 +21,4 @@ if (LIVE_API) {
     .catch(e => {
       console.error(e);
     });
-} else {
-  showIt(window.CANNED_RESPONSE);
-}
+};
