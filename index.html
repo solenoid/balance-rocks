@@ -44,6 +44,7 @@
         computed: {
           minPhotos: function() {
             return this.photos.map(d => {
+              // TODO stop assuming url structure that seems to happen in practice
               const urlParts = d.url.split("/");
               const nameParts = urlParts[urlParts.length - 2].split("-");
               // remove the number part of the name
