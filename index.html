@@ -19,9 +19,16 @@
   <body>
     <h1>Balance Rocks</h1>
     <div id="app">
-      <a v-for="photo in photos" :href="photo.url" target="photo">
-        <img :src="photo.src.tiny" />
-        <br />
+      <a
+        v-for="photo in photos"
+        :href="photo.url"
+        :style="{ display: 'block' }"
+        target="photo"
+      >
+        <img
+          :src="photo.src.tiny"
+          :style="{ 'vertical-align': 'bottom', 'margin-bottom': '5px' }"
+        />
       </a>
     </div>
     <script type="module">
