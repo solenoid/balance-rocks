@@ -19,8 +19,8 @@
   <body>
     <h1>Balance Rocks</h1>
     <div id="app">
-      <a v-for="photo in photos" v-bind:href="photo.url" target="photo">
-        <img v-bind:src="photo.src.tiny" />
+      <a v-for="photo in photos" :href="photo.url" target="photo">
+        <img :src="photo.src.tiny" />
         <br />
       </a>
     </div>
