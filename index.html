@@ -22,9 +22,11 @@
   <body>
     <h1>Balance Rocks</h1>
     <div id="app">
-      <a v-for="photo in minPhotos" :href="photo.url" target="photo">
-        <img :src="photo.src" :alt="photo.alt" />
-      </a>
+      <template v-for="photo in minPhotos">
+        <a :href="photo.url" target="photo">
+          <img :src="photo.src" :alt="photo.alt" />
+        </a>
+      </template>
     </div>
     <script type="module">
       import Vue from "https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.esm.browser.js";
