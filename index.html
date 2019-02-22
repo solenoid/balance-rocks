@@ -14,22 +14,16 @@
       h1 {
         margin: 0;
       }
+      img {
+        vertical-align: bottom;
+      }
     </style>
   </head>
   <body>
     <h1>Balance Rocks</h1>
     <div id="app">
-      <a
-        v-for="photo in minPhotos"
-        :href="photo.url"
-        :style="{ display: 'block' }"
-        target="photo"
-      >
-        <img
-          :src="photo.src"
-          :style="{ 'vertical-align': 'bottom', 'margin-bottom': '5px' }"
-          :alt="photo.alt"
-        />
+      <a v-for="photo in minPhotos" :href="photo.url" target="photo">
+        <img :src="photo.src" :alt="photo.alt" />
       </a>
     </div>
     <script type="module">
