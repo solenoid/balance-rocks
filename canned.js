@@ -1,7 +1,7 @@
 export const CANNED_RESPONSE = {
-  total_results: 5644,
+  total_results: 5673,
   page: 1,
-  per_page: 10,
+  per_page: 12,
   photos: [
     {
       id: 668353,
@@ -28,33 +28,6 @@ export const CANNED_RESPONSE = {
           "https://images.pexels.com/photos/668353/pexels-photo-668353.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
         tiny:
           "https://images.pexels.com/photos/668353/pexels-photo-668353.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=200&w=280",
-      },
-    },
-    {
-      id: 235990,
-      width: 3848,
-      height: 2565,
-      url: "https://www.pexels.com/photo/balance-macro-ocean-pebbles-235990/",
-      photographer: "Pixabay",
-      photographer_url: "https://www.pexels.com/@pixabay",
-      src: {
-        original: "https://images.pexels.com/photos/235990/pexels-photo-235990.jpeg",
-        large2x:
-          "https://images.pexels.com/photos/235990/pexels-photo-235990.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        large:
-          "https://images.pexels.com/photos/235990/pexels-photo-235990.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-        medium:
-          "https://images.pexels.com/photos/235990/pexels-photo-235990.jpeg?auto=compress&cs=tinysrgb&h=350",
-        small:
-          "https://images.pexels.com/photos/235990/pexels-photo-235990.jpeg?auto=compress&cs=tinysrgb&h=130",
-        portrait:
-          "https://images.pexels.com/photos/235990/pexels-photo-235990.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
-        square:
-          "https://images.pexels.com/photos/235990/pexels-photo-235990.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=1200&w=1200",
-        landscape:
-          "https://images.pexels.com/photos/235990/pexels-photo-235990.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
-        tiny:
-          "https://images.pexels.com/photos/235990/pexels-photo-235990.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=200&w=280",
       },
     },
     {
@@ -223,6 +196,33 @@ export const CANNED_RESPONSE = {
       },
     },
     {
+      id: 235990,
+      width: 3848,
+      height: 2565,
+      url: "https://www.pexels.com/photo/balance-macro-ocean-pebbles-235990/",
+      photographer: "Pixabay",
+      photographer_url: "https://www.pexels.com/@pixabay",
+      src: {
+        original: "https://images.pexels.com/photos/235990/pexels-photo-235990.jpeg",
+        large2x:
+          "https://images.pexels.com/photos/235990/pexels-photo-235990.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        large:
+          "https://images.pexels.com/photos/235990/pexels-photo-235990.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        medium:
+          "https://images.pexels.com/photos/235990/pexels-photo-235990.jpeg?auto=compress&cs=tinysrgb&h=350",
+        small:
+          "https://images.pexels.com/photos/235990/pexels-photo-235990.jpeg?auto=compress&cs=tinysrgb&h=130",
+        portrait:
+          "https://images.pexels.com/photos/235990/pexels-photo-235990.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+        square:
+          "https://images.pexels.com/photos/235990/pexels-photo-235990.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=1200&w=1200",
+        landscape:
+          "https://images.pexels.com/photos/235990/pexels-photo-235990.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+        tiny:
+          "https://images.pexels.com/photos/235990/pexels-photo-235990.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=200&w=280",
+      },
+    },
+    {
       id: 715414,
       width: 6000,
       height: 4000,
@@ -276,6 +276,60 @@ export const CANNED_RESPONSE = {
           "https://images.pexels.com/photos/355863/pexels-photo-355863.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=200&w=280",
       },
     },
+    {
+      id: 816377,
+      width: 5301,
+      height: 3410,
+      url: "https://www.pexels.com/photo/balancing-rock-formation-816377/",
+      photographer: "Tina Nord",
+      photographer_url: "https://www.pexels.com/@nord6",
+      src: {
+        original: "https://images.pexels.com/photos/816377/pexels-photo-816377.jpeg",
+        large2x:
+          "https://images.pexels.com/photos/816377/pexels-photo-816377.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        large:
+          "https://images.pexels.com/photos/816377/pexels-photo-816377.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        medium:
+          "https://images.pexels.com/photos/816377/pexels-photo-816377.jpeg?auto=compress&cs=tinysrgb&h=350",
+        small:
+          "https://images.pexels.com/photos/816377/pexels-photo-816377.jpeg?auto=compress&cs=tinysrgb&h=130",
+        portrait:
+          "https://images.pexels.com/photos/816377/pexels-photo-816377.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+        square:
+          "https://images.pexels.com/photos/816377/pexels-photo-816377.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=1200&w=1200",
+        landscape:
+          "https://images.pexels.com/photos/816377/pexels-photo-816377.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+        tiny:
+          "https://images.pexels.com/photos/816377/pexels-photo-816377.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=200&w=280",
+      },
+    },
+    {
+      id: 1051449,
+      width: 5472,
+      height: 3648,
+      url: "https://www.pexels.com/photo/closeup-photography-of-stacked-stones-1051449/",
+      photographer: "Shiva Smyth",
+      photographer_url: "https://www.pexels.com/@shiva-smyth-394854",
+      src: {
+        original: "https://images.pexels.com/photos/1051449/pexels-photo-1051449.jpeg",
+        large2x:
+          "https://images.pexels.com/photos/1051449/pexels-photo-1051449.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        large:
+          "https://images.pexels.com/photos/1051449/pexels-photo-1051449.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        medium:
+          "https://images.pexels.com/photos/1051449/pexels-photo-1051449.jpeg?auto=compress&cs=tinysrgb&h=350",
+        small:
+          "https://images.pexels.com/photos/1051449/pexels-photo-1051449.jpeg?auto=compress&cs=tinysrgb&h=130",
+        portrait:
+          "https://images.pexels.com/photos/1051449/pexels-photo-1051449.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+        square:
+          "https://images.pexels.com/photos/1051449/pexels-photo-1051449.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=1200&w=1200",
+        landscape:
+          "https://images.pexels.com/photos/1051449/pexels-photo-1051449.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+        tiny:
+          "https://images.pexels.com/photos/1051449/pexels-photo-1051449.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=200&w=280",
+      },
+    },
   ],
-  next_page: "https://api.pexels.com/v1/search/?page=2&per_page=10&query=balance+rocks",
+  next_page: "https://api.pexels.com/v1/search/?page=2&per_page=12&query=balance+rocks",
 };
