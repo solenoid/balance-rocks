@@ -22,7 +22,7 @@
   <body>
     <h1>Balance Rocks</h1>
     <div id="app">
-      <template v-for="photo in minPhotos">
+      <template v-for="photo in minPhotos" :key="photo.url">
         <a :href="photo.url" target="photo">
           <img :src="photo.src" :alt="photo.alt" />
         </a>
