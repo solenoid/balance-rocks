@@ -3,9 +3,7 @@
   "version": "0.0.1",
   "description": "Experimental website",
   "license": "MIT",
-  "main": "index.js",
-  "repository": "github:solenoid/balance-rocks",
-  "homepage": "https://solenoid.github.io/balance-rocks/",
+  "browser": "src/index.js",
   "scripts": {
     "copy:public": "cp -rf public/ dist",
     "build:js": "webpack -p",
