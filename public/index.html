@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <title>Solen Dev</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+      body {
+        font-family: HelveticaNeue, Helvetica Neue, Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 5px;
+        background: #ddd;
+      }
+      h1 {
+        margin: 0;
+      }
+      img {
+        vertical-align: bottom;
+      }
+      /* TODO use prefers-color-scheme when it becomes more generally available */
+    </style>
+  </head>
+  <body>
+    <h1>Solen Dev</h1>
+    <div id="app">
+      <template v-for="photo in minPhotos">
+        <a :href="photo.url" target="photo" :key="photo.url">
+          <img :src="photo.src" :alt="photo.alt" />
+        </a>
+      </template>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
