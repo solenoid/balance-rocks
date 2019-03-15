@@ -30,9 +30,21 @@ This is more of a personal project until it hits a steady state. So feel free to
 
 ## Coming Soon
 
+### Hooks
+
+Because they're fun to try out.
+
 ### Build pipeline
 
 Likely headed towards travis-ci.
+
+### Production ready JS
+
+Make sure the built JS is optimized well and can serve correctly outside of dev.
+
+### Settle down styling
+
+Likely getting in a simple css approach.
 
 ### API secrets locally and after deploy
 
