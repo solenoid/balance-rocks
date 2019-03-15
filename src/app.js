@@ -18,7 +18,7 @@ const App = () => {
   });
   return (
     <>
-      <h2>Balance Rocks</h2>
+      <h1>Solen Dev Balance Rocks</h1>
       <div className="flippers">
         <button disabled={howMany < 1} onClick={() => setHowMany(howMany - 1)}>
           &lsaquo;
