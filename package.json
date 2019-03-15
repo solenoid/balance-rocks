@@ -8,7 +8,7 @@
     "copy:public": "cp -rf public/ dist",
     "build:js": "webpack -p",
     "build": "npm install && npm run copy:public && npm run build:js",
-    "start": "webpack-dev-server --mode=development --hot --devtool=cheap-module-source-map --colors --port 3000"
+    "start": "webpack-dev-server --hot --compress --colors --mode development --devtool cheap-module-source-map --port 3000"
   },
   "devDependencies": {
     "@babel/core": "7.3.4",

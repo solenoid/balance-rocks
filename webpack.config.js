@@ -31,8 +31,8 @@ module.exports = {
     ],
   },
   devServer: {
+    // NOTE: contentBase is preferred to be an absolute path so configure it here
+    //       the rest of configurations are done as npm shell script args
     contentBase: path.join(__dirname, "dist"),
-    compress: true,
-    port: 9000,
   },
 };
