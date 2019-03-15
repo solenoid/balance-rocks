@@ -3,6 +3,11 @@ module.exports = {
   output: {
     filename: "[name].js",
   },
+  resolve: {
+    alias: {
+      "react-dom": "@hot-loader/react-dom",
+    },
+  },
   module: {
     rules: [
       {
@@ -25,8 +30,6 @@ module.exports = {
       },
     ],
   },
-  mode: "development",
-  devtool: "inline-source-map",
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     compress: true,

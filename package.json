@@ -8,7 +8,7 @@
     "copy:public": "cp -rf public/ dist",
     "build:js": "webpack -p",
     "build": "npm install && npm run copy:public && npm run build:js",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server --mode=development --hot --devtool=cheap-module-source-map --colors --port 3000"
   },
   "devDependencies": {
     "@babel/core": "7.3.4",
@@ -20,7 +20,9 @@
     "webpack-dev-server": "3.2.1"
   },
   "dependencies": {
+    "@hot-loader/react-dom": "16.8.4",
     "react": "16.8.4",
-    "react-dom": "16.8.4"
+    "react-dom": "16.8.4",
+    "react-hot-loader": "4.8.0"
   }
 }
