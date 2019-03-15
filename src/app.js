@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { hot } from "react-hot-loader/root";
 import { CANNED_RESPONSE } from "./canned.js";
 
 const App = () => {
-  const photos = CANNED_RESPONSE.photos.slice(0, 12).map(d => {
+  const [howMany, setHowMany] = useState(12);
+  const photos = CANNED_RESPONSE.photos.slice(0, howMany).map(d => {
     // TODO stop assuming url structure that seems to happen in practice
     const urlParts = d.url.split("/");
     const nameParts = urlParts[urlParts.length - 2].split("-");
@@ -18,6 +19,11 @@ const App = () => {
   return (
     <>
       <h2>Balance Rocks</h2>
+      <div className="flippers">
+        <button onClick={() => setHowMany(howMany - 1)}>&lsaquo;</button>
+        {howMany}
+        <button onClick={() => setHowMany(howMany + 1)}>&rsaquo;</button>
+      </div>
       {photos.map(p => (
         <a href={p.url} key={p.url} target="photo">
           <img src={p.src} alt={p.alt} />
