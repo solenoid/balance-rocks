@@ -10,9 +10,18 @@ h1 {
 img {
   vertical-align: bottom;
 }
+a {
+  display: block;
+  margin-bottom: 5px;
+}
 .flippers span {
   display: inline-block;
   width: 36px;
   text-align: center;
+}
+.masonry {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 5px;
 }
 /* TODO use prefers-color-scheme when it becomes more generally available */
