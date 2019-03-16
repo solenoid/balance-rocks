@@ -6,9 +6,9 @@
   "browser": "src/index.js",
   "scripts": {
     "copy:public": "cp -rf public/ dist",
-    "build:js": "webpack -p",
+    "build:js": "webpack --config webpack.prod.js --display-modules",
     "build": "npm install && npm run copy:public && npm run build:js",
-    "start": "webpack-dev-server --hot --compress --colors --mode development --devtool cheap-module-source-map --port 4000"
+    "start": "webpack-dev-server --config webpack.dev.js --color"
   },
   "devDependencies": {
     "@babel/core": "7.3.4",
