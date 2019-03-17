@@ -1,4 +1,5 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   mode: "development",
   output: {
@@ -14,6 +15,12 @@ module.exports = {
       { test: /\.css$/, use: [{ loader: "style-loader" }, { loader: "css-loader" }] },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: "public/index.html",
+    }),
+  ],
   resolve: {
     alias: {
       "react-dom": "@hot-loader/react-dom",
