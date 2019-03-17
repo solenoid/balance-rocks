@@ -6,9 +6,11 @@ const App = () => {
   const [_, forceUpdate] = useState();
   const [colWidth, setColWidth] = useState(0);
   const [howMany, setHowMany] = useState(9);
+  // NOTE COL_COUNT and GRID_GAP should be kept in sync with css definitions
+  const COL_COUNT = 3;
+  const GRID_GAP = 5;
   useEffect(() => {
-    // NOTE 20 px and 3 columns should be coordinated with css setup
-    setColWidth(Math.floor((window.innerWidth - 20) / 3));
+    setColWidth(Math.floor((window.innerWidth - (COL_COUNT + 1) * GRID_GAP) / COL_COUNT));
   });
   useEffect(() => {
     // TODO consider debouncing the resize
@@ -34,11 +36,12 @@ const App = () => {
     };
   });
   // organize photos into a masonry layout based on varying heights
+  // TODO consider if we want this to work w/ an arbitrary amount of columns vs. just 3
   const [[c1, c2, c3]] = photos.reduce(
     (memo, cur) => {
       let [[c1, c2, c3], [h1, h2, h3]] = memo;
       const csh = 0.8 * cur.scaledHeight;
-      const additionalHeight = cur.scaledHeight + 5;
+      const additionalHeight = cur.scaledHeight + GRID_GAP;
       if (h1 < h2 + csh && h1 < h3 + csh) {
         c1.push(cur);
         h1 += additionalHeight;
