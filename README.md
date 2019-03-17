@@ -24,13 +24,15 @@ After that's running visit the site:
 
 <http://localhost:3000/>
 
+## Deploys
+
+Deploys are build with [travis-ci](https://travis-ci.org/solenoid/balance-rocks) and then deployed up to github pages. The site once deployed is generally available through github pages at:
+
+<https://solenoid.github.io/balance-rocks/>
+
 ## Contributions
 
 This is more of a personal project until it hits a steady state. So feel free to fork and try out your own experiments, but trying to get them integrated back here isn't a goal.
-
-## Deploys
-
-Deploys are build with [travis-ci](https://travis-ci.org/solenoid/balance-rocks) and then deployed up to github pages. The site once deployed is generally available through github pages at <https://solenoid.github.io/balance-rocks/>
 
 ## Experiments
 
