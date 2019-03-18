@@ -60,9 +60,7 @@ const App = () => {
   });
 
   // organize photos into a masonry layout based on varying heights
-  // see http://2ality.com/2013/11/initializing-arrays.html
-  const initialCols = Array.apply(null, Array(columnCount)).map(() => []);
-  // NOTE fill works well for non mutable values, but not for arrays for example
+  const initialCols = new Array(columnCount).fill().map(() => []);
   const initialHeights = new Array(columnCount).fill(0);
   console.log(JSON.stringify(initialCols));
   const [cols, heights] = photos.reduce(
