@@ -13,6 +13,18 @@ img {
 a {
   display: block;
   margin-bottom: 5px;
+  position: relative;
+}
+a span {
+  background: rgba(255, 255, 255, 0.4);
+  color: #444;
+  position: absolute;
+  display: block;
+  padding: 4px;
+  margin: 4px;
+  border-radius: 12px;
+  text-align: center;
+  min-width: 24px;
 }
 .flippers span {
   display: inline-block;
@@ -21,7 +33,34 @@ a {
 }
 .masonry {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 5px;
 }
+
+/* TODO consider bringing in `salesforce-ux/theo` to manage shared css and js style concerns */
+/* NOTE walk up from smallest to largest since cascade will use the last match */
+@media (min-width: 0px) {
+  .masonry {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  body {
+    background: purple;
+  }
+}
+@media (min-width: 600px) {
+  .masonry {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  body {
+    background: red;
+  }
+}
+@media (min-width: 1280px) {
+  .masonry {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  body {
+    background: blue;
+  }
+}
+
 /* TODO use prefers-color-scheme when it becomes more generally available */
