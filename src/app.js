@@ -94,7 +94,6 @@ const App = () => {
         <button disabled={howMany > 11} onClick={() => setHowMany(howMany + 1)}>
           &rsaquo;
         </button>
-        {columnCount}
       </div>
       <div className="masonry">
         {cols.map((col, i) => {

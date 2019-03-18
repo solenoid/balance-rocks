@@ -42,24 +42,15 @@ a span {
   .masonry {
     grid-template-columns: repeat(2, 1fr);
   }
-  body {
-    background: purple;
-  }
 }
 @media (min-width: 600px) {
   .masonry {
     grid-template-columns: repeat(3, 1fr);
   }
-  body {
-    background: red;
-  }
 }
 @media (min-width: 1280px) {
   .masonry {
     grid-template-columns: repeat(4, 1fr);
-  }
-  body {
-    background: blue;
   }
 }
 
