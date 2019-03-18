@@ -66,7 +66,7 @@ const App = () => {
   const [cols, heights] = photos.reduce(
     (memo, cur) => {
       let [cols, heights] = memo;
-      const csh = 0.8 * cur.scaledHeight;
+      const csh = 0.5 * cur.scaledHeight;
       const additionalHeight = cur.scaledHeight + GRID_GAP;
       const colIndex = heights
         .map((h, i, list) =>
