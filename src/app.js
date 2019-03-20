@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { hot } from "react-hot-loader/root";
+import { debounce } from "debounce";
 import { CANNED_RESPONSE } from "./canned.js";
 
 // see: https://usehooks.com/useMedia/ for commented version of this code
@@ -20,6 +21,7 @@ const useMedia = (queries, values, defaultValue) => {
 
 const App = () => {
   const [_, forceUpdate] = useState();
+  const debouncedUpdate = debounce(forceUpdate, 16);
   const [colWidth, setColWidth] = useState(0);
   const [howMany, setHowMany] = useState(9);
   const columnCount = useMedia(
@@ -28,22 +30,21 @@ const App = () => {
     [4, 3, 2],
     3,
   );
-  const GRID_GAP = 5;
+  // NOTE: keep 5 in coordination with css grid values
+  const GRID_ROW_GAP = 5;
   useEffect(() => {
     setColWidth(
-      Math.floor((window.innerWidth - (columnCount + 1) * GRID_GAP) / columnCount),
+      Math.floor((window.innerWidth - (columnCount + 1) * GRID_ROW_GAP) / columnCount),
     );
   });
   useEffect(() => {
-    // TODO consider debouncing the resize
-    // need to test, but try out 166 for 10 frames at 60 Hz first
-    window.addEventListener("resize", forceUpdate);
+    window.addEventListener("resize", debouncedUpdate);
     return () => {
-      window.removeEventListener("resize", forceUpdate);
+      window.removeEventListener("resize", debouncedUpdate);
     };
-  });
+  }, []);
   // take the off the wire API and prepare it for just what's needed to render
-  const photos = CANNED_RESPONSE.photos.slice(0, howMany).map((d, oi) => {
+  const photos = CANNED_RESPONSE.photos.slice(0, howMany).map((d, index) => {
     // TODO stop assuming url structure that seems to happen in practice
     const urlParts = d.url.split("/");
     const nameParts = urlParts[urlParts.length - 2].split("-");
@@ -51,7 +52,7 @@ const App = () => {
     nameParts.pop();
     return {
       url: d.url,
-      oi: oi,
+      index: index + 1,
       scaledHeight: (colWidth * d.height) / d.width,
       // TODO figure out if we want to have width be hardcoded here or more dynamic
       src: d.src.original + "?auto=compress&cs=tinysrgb&w=420",
@@ -62,17 +63,16 @@ const App = () => {
   // organize photos into a masonry layout based on varying heights
   const initialCols = new Array(columnCount).fill().map(() => []);
   const initialHeights = new Array(columnCount).fill(0);
-  console.log(JSON.stringify(initialCols));
   const [cols, heights] = photos.reduce(
     (memo, cur) => {
       let [cols, heights] = memo;
-      const csh = 0.5 * cur.scaledHeight;
-      const additionalHeight = cur.scaledHeight + GRID_GAP;
+      const adjustedHeight = 0.5 * cur.scaledHeight;
+      const additionalHeight = cur.scaledHeight + GRID_ROW_GAP;
       const colIndex = heights
         .map((h, i, list) =>
           list
             .slice(i + 1)
-            .map(d => d + csh)
+            .map(d => d + adjustedHeight)
             .every(d => h <= d),
         )
         .findIndex(d => d);
@@ -101,7 +101,7 @@ const App = () => {
             <div id={`col-${i}`} key={i}>
               {col.map(p => (
                 <a href={p.url} key={p.url} target="photo">
-                  <span>{p.oi + 1}</span>
+                  <span>{p.index}</span>
                   <img src={p.src} alt={p.alt} style={{ width: colWidth }} />
                 </a>
               ))}
