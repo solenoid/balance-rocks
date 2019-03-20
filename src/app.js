@@ -61,9 +61,10 @@ const App = () => {
   });
 
   // organize photos into a masonry layout based on varying heights
+  // TODO turn this into a well tested function if we stick with this layout approach
   const initialCols = new Array(columnCount).fill().map(() => []);
   const initialHeights = new Array(columnCount).fill(0);
-  const [cols, heights] = photos.reduce(
+  const [cols] = photos.reduce(
     (memo, cur) => {
       let [cols, heights] = memo;
       const adjustedHeight = 0.5 * cur.scaledHeight;
